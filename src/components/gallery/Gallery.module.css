@@ -1,0 +1,32 @@
+.gallery {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1.125em;
+  
+}
+
+.gallery img {
+  width: 10.125em;
+  border-radius: 0.75em;
+}
+
+.photos {
+  display:flex;
+  justify-content:center;
+  margin-top: 1.688em;
+   
+}
+
+/* imagem da esquerda (mais baixa) */
+.left{
+  margin-right: -2.625em; 
+  transform: translateY(5em); 
+  z-index:2;
+}
+
+/* imagem da direita (mais alta) */
+.right{
+  transform: translateY(-1.875em); 
+  z-index:1;
+}
