@@ -6,8 +6,7 @@ function Home() {
   return (
     <>
       <Navbar />
-      <Hero />
-      <Gallery />
+      
     </>
   );
 }
