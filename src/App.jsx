@@ -1,7 +1,13 @@
-import Home from "./pages-temp/Home";
+import { Home } from "./pages/Home";
+
+
 
 function App() {
-  return <Home />;
+  return (
+    <dib>
+      <Home />
+    </dib>
+  );
 }
 
 export default App;

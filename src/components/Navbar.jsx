@@ -1,17 +1,17 @@
-
-import styles from "./navbar.module.css";
-import logo from "../../assets/YellowBag Logo 1.png";
-import menu from "../../assets/menu-rounded.svg";
-import container from "../../styles/container.module.css";
 import {
   Backpack,
   Info,
   NewspaperClipping,
   AddressBookTabs,
 } from "@phosphor-icons/react";
+import styles from "./Navbar.module.css";
 import { useState, useRef, useEffect } from "react";
 
-function Navbar() {
+import YbEduLogo from "../assets/ybedu-logo.svg";
+import MenuIcon from "../assets/menu-icon.svg";
+import MenuIconWhite from "../assets/menu-icon-white.svg";
+
+export function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const menuRef = useRef(null);
 
@@ -34,31 +34,30 @@ function Navbar() {
   }, []);
 
   return (
-    <div className={container.container}>
+    <div>
       <nav className={styles.navbar}>
-        <img src={logo} alt="logo" className={styles.logo} />
+        <img src={YbEduLogo} alt="Logo da YellowBagEdu"/>
         <div className={styles.menuWrapper} ref={menuRef}>
-          <button className={styles.menuButton} onClick={toggleMenu}>
-            <img src={menu} alt="menu" />
+          <button className={menuOpen ? styles.menuButtonOpen : styles.menuButton} onClick={toggleMenu}>
+            <img src={menuOpen ? MenuIconWhite : MenuIcon} alt="Ícone de Menu" />
           </button>
-
           {menuOpen && (
             <div className={styles.menu}>
               <a href="#">
                 {" "}
-                <Backpack size={20} /> HOME
+                <Backpack size={32} /> HOME
               </a>
               <a href="#">
                 {" "}
-                <Info size={20} /> SOBRE NÓS
+                <Info size={32} /> SOBRE NÓS
               </a>
               <a href="#">
                 {" "}
-                <NewspaperClipping size={20} /> MEMÓRIAS
+                <NewspaperClipping size={32} /> MEMÓRIAS
               </a>
               <a href="#">
                 {" "}
-                <AddressBookTabs size={20} /> CONTATOS
+                <AddressBookTabs size={32} /> CONTATOS
               </a>
             </div>
           )}
@@ -68,4 +67,3 @@ function Navbar() {
   );
 }
 
-export default Navbar;
