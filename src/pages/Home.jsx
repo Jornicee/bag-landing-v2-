@@ -1,9 +1,33 @@
 import { Navbar } from "../components/Navbar";
 
+
+import Img01 from "../assets/img-01.png";
+import Img02 from "../assets/img-02.png";
+import styles from "./Home.module.css";
+
 export function Home() {
   return (
     <>
       <Navbar />
+      <main>
+          <section className={styles.mainContainer}>
+            <h1>Transformamos o FUTURO!</h1>
+            <p>
+              A YellowBagEdu é uma startup paraense focada em transformar 
+              a educação através da tecnologia e criatividade. 
+              Desenvolvemos metodologias acessíveis que unem o 
+              pensamento computacional às raízes da Amazônia, 
+              promovendo um ensino lúdico para diversas idades. 
+              Nosso compromisso é capacitar mentes autônomas e prontas 
+              para o futuro digital global.
+            </p>
+            <a href="#contato">FALE CONOSCO</a>
+          </section>
+          <section className={styles.imageSection}>
+            <img src={Img01} alt="Imagem 1" />
+            <img src={Img02} alt="Imagem 2" />
+          </section>
+      </main>
     </>
   );
 }

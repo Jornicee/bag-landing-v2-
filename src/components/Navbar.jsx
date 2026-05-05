@@ -11,6 +11,8 @@ import YbEduLogo from "../assets/ybedu-logo.svg";
 import MenuIcon from "../assets/menu-icon.svg";
 import MenuIconWhite from "../assets/menu-icon-white.svg";
 
+
+
 export function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const menuRef = useRef(null);
