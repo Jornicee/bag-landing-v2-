@@ -8,6 +8,14 @@ import Img02 from "../assets/img-02.png";
 import styles from "./Home.module.css";
 
 export function Home() {
+  const handleWhatsAppClick = (e) => {
+    e.preventDefault();
+    const message = encodeURIComponent(
+      "Olá! Vim através da Landing Page da YellowBagEdu e gostaria de conhecer mais sobre as jornadas e projetos desenvolvidos. Podem me ajudar?"
+    );
+    window.open(` https://wa.me/559193412953/?text=${message}`, "_blank");
+  };
+
   return (
     <>
       <Navbar />
@@ -28,7 +36,7 @@ export function Home() {
               Nosso compromisso é capacitar mentes autônomas e prontas 
               para o futuro digital global.
             </p>
-            <a href="#contato">
+            <a href="#contato" onClick={handleWhatsAppClick}>
               <WhatsappLogoIcon size={32} />
               FALE CONOSCO
             </a>
