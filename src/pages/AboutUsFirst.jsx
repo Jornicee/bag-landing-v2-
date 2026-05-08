@@ -1,10 +1,32 @@
 import styles from "./AboutUsFirst.module.css";
 
+import LineImage from "../assets/line-img.svg";
+import YBEduLogo02 from "../assets/ybedu-logo-v2.svg";
+
 export function AboutUsFirst() {
     return (
-        <div className={styles.container}>
-            <h1>About Us</h1>
-        </div>
+        <section className={styles.sectionAboutUsFirst}>
+            <div className={styles.containerHeader}>
+                <img src={LineImage} alt="Linha azul" />
+                <h1>SOBRE NÓS</h1>
+                <img src={LineImage} alt="Linha azul" />
+            </div>
+            <div className={styles.containerContent}>
+                <img src={YBEduLogo02} alt="Logo da YellowBagEdu" />
+                <p className={styles.contentTextMobile}>
+                    A YellowBagEdu é uma StartUp Paraense 
+                    que une <span> Criatividade, Tecnologia e a habilidade do 
+                    Pensamento Computacional para transformar a educação.</span>  
+                    {" "} 
+                    Criamos experiências de aprendizagem lúdicas e alinhadas à realidade 
+                    amazônica, aproximando jovens do mundo digital 
+                    de forma prática e significativa. Acreditamos em um conhecimento que 
+                    faça sentido, conectando cultura local e 
+                    ferramentas modernas para formar estudantes autônomos, 
+                    curiosos e preparados para o futuro.
+                </p>
+            </div>
+        </section>
     )
 }
 

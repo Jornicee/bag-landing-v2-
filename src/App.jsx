@@ -4,8 +4,8 @@ import { Home } from "./pages/Home";
 function App() {
   return (
     <dib>
-      {/* <AboutUsFirst/> */}
       <Home />
+      <AboutUsFirst/>
     </dib>
   );
 }
