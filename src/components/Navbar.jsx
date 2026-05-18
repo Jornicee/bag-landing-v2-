@@ -38,11 +38,11 @@ export function Navbar() {
       <nav className={styles.navbar}>
         <img src={YbEduLogo} className={styles.logo} alt="Logo da YellowBagEdu"/>
         <div className={styles.navLinks}>
-          <a href="#">
+          <a href="#home">
             <Backpack size={32} />
             HOME
           </a>
-          <a href="#">
+          <a href="#aboutus">
             <Info size={32} />
             SOBRE NÓS
           </a>

@@ -17,7 +17,7 @@ export function Home() {
   };
 
   return (
-    <>
+    <section id="home">
       <Navbar />
       <main>
           <section className={styles.mainContainer}>
@@ -46,6 +46,6 @@ export function Home() {
             <img src={Img02} alt="Imagem 2" />
           </section>
       </main>
-    </>
+    </section>
   );
 }

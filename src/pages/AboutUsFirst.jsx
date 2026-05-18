@@ -5,7 +5,7 @@ import YBEduLogo02 from "../assets/ybedu-logo-v2.svg";
 
 export function AboutUsFirst() {
     return (
-        <section className={styles.sectionAboutUsFirst}>
+        <section id="aboutus" className={styles.sectionAboutUsFirst}>
             <div className={styles.containerHeader}>
                 <img src={LineImage} alt="Linha azul" />
                 <h1>SOBRE NÓS</h1>
