@@ -61,11 +61,11 @@ export function Navbar() {
           </button>
           {showMenu && (
             <div className={styles.menu}>
-              <a href="#">
+              <a href="#home">
                 {" "}
                 <Backpack size={32} /> HOME
               </a>
-              <a href="#">
+              <a href="#aboutus">
                 {" "}
                 <Info size={32} /> SOBRE NÓS
               </a>

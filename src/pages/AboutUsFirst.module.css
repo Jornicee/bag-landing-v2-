@@ -28,7 +28,7 @@
 }
 
 .containerHeader h1 {
-    font-size: clamp(1rem, 4vw, 2.125rem);
+    font-size: clamp(1rem, 4vw, 1.4rem);
     font-weight: 700;
     font-family: 'Nunito', sans-serif;
 
@@ -38,8 +38,7 @@
 
 .containerHeader img {
     width: clamp(4rem, 10vw, 6.625rem);
-    height: auto;
-    max-height: 3rem;
+    height: 3px;
 }
 
 .containerContent {
@@ -149,7 +148,6 @@
 
     .containerHeader img {
         max-width: 4rem;
-        max-height: 2rem;
     }
 
     .containerContent {

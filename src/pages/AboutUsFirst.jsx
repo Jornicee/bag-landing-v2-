@@ -1,7 +1,7 @@
-import styles from "./AboutUsFirst.module.css";
-
 import LineImage from "../assets/line-img.svg";
 import YBEduLogo02 from "../assets/ybedu-logo-v2.svg";
+
+import styles from "./AboutUsFirst.module.css";
 
 export function AboutUsFirst() {
     return (

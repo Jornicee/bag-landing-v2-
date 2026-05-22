@@ -1,3 +1,4 @@
+import { AboutPurpose } from "./pages/AboutPurpose";
 import { AboutUsFirst } from "./pages/AboutUsFirst";
 import { Home } from "./pages/Home";
 
@@ -6,6 +7,7 @@ function App() {
     <dib>
       <Home />
       <AboutUsFirst/>
+      <AboutPurpose/>
     </dib>
   );
 }

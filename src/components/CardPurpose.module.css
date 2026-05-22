@@ -1,0 +1,273 @@
+.cardPurpose {
+    margin-bottom: 2rem;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    justify-content: center;
+    position: relative;
+}
+
+.content img {
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 0.5rem;
+    z-index: 1;
+}
+
+.content::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
+    pointer-events: none;
+    border-radius: 0.5rem;
+    z-index: 1;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+    visibility: visible;
+    opacity: 1;
+}
+
+.content:has(img:hover)::after {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.content h2 {
+    font-weight: 600;
+    z-index: 2;
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+.content:has(img:hover) h2 {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.content p {
+    text-align: left;
+    font-weight: 500;
+    z-index: 1;
+    position: absolute;
+    visibility: hidden;
+    padding: 0.75rem;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 0.5rem;
+    color: var(--color-white);
+}
+
+.content:has(img:hover) p {
+    cursor: pointer;
+    visibility: visible;
+    opacity: 1;
+    animation: scaleUp 0.2s ease-in-out forwards;
+}
+
+.backgroundImage {
+    width: 100%;
+    height: auto;
+    position: relative;
+}
+
+@keyframes scaleUp {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.1);
+    }
+}
+
+@media (min-width: 641px) and (max-width: 1024px) {
+    .cardPurpose {
+        margin-bottom: 2rem;
+    }
+
+    .content {
+        gap: 1.5rem;
+    }
+
+    .content img {
+        max-width: 12rem;
+        height: 15rem;
+    }
+
+    .content::after {
+        width: 12rem;
+        height: 7.5rem;
+        margin-top: 7.5rem;
+    }
+
+    .content h2 {
+        font-size: 1.5rem;
+        margin: -4rem 0 0 -4rem;
+    }
+
+    .content p {
+        max-width: 10rem;
+        font-size: 0.75rem;
+        margin-top: 0.5rem;
+        padding: 1rem;
+    }
+
+    .backgroundImage {
+        max-width: 12rem;
+        max-height: 15rem;
+        margin-left: 4.5rem;
+        margin-top: -9rem;
+    }
+}
+
+@media (max-width: 640px) {
+    .cardPurpose {
+        margin-bottom: 2rem;
+    }
+
+    .content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        justify-content: center;
+        position: relative;
+
+    }
+
+    .content img {
+        max-width: 10rem;
+        height: 12.375rem;
+        background: rgba(0, 0, 0, 0.3);
+        border-radius: 0.5rem;
+        z-index: 1;
+    }
+
+    .content::after {
+        content: '';
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 10rem;
+        height: 6.5rem;
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
+        pointer-events: none;
+        border-radius: 0.5rem;
+        margin-top: 6rem;
+        z-index: 1;
+        transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+        visibility: visible;
+        opacity: 1;
+    }
+
+    .content:has(img:hover)::after {
+        visibility: hidden;
+        opacity: 0;
+    }
+
+    .content h2 {
+        font-size: 1.375rem;
+        font-weight: 600;
+        z-index: 2;
+        margin: -3.4rem 0 0 -3.4rem;
+        visibility: visible;
+        opacity: 1;
+        transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+    }
+
+    .content:has(img:hover) h2 {
+        visibility: hidden;
+        opacity: 0;
+    }
+
+    .content p {
+        max-width: 9rem;
+        height: 11.4rem;
+        text-align: left;
+        font-size: 0.675rem;
+        font-weight: 500;
+        z-index: 1;
+        position: absolute;
+        visibility: hidden;
+        margin-top: 0.2rem;
+        padding: 0.75rem 0.75rem 0 0.75rem;
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+        background: rgba(0, 0, 0, 0.7);
+        border-radius: 0.5rem;
+        color: var(--color-white);
+    }
+
+    .content:has(img:hover) p {
+        visibility: visible;
+        opacity: 1;
+        animation: scaleUp 0.2s ease-in-out forwards;
+    }
+
+    .backgroundImage {
+        width: 100%;
+        height: auto;
+        max-width: 10rem;
+        max-height: 12.375rem;
+
+        position: relative;
+        margin-left: 4rem;
+        margin-top: -8rem;
+    }
+}
+
+@media (min-width: 1025px) {
+    .cardPurpose {
+        margin-bottom: 3rem;
+    }
+
+    .content {
+        gap: 2rem;
+    }
+
+    .content img {
+        max-width: 14rem;
+        height: 17.5rem;
+    }
+
+    .content::after {
+        width: 14rem;
+        height: 8.75rem;
+        margin-top: 8.75rem;
+    }
+
+    .content h2 {
+        font-size: 1.75rem;
+        margin: -5rem 0 0 -4.5rem;
+    }
+
+    .content p {
+        max-width: 11rem;
+        font-size: 0.85rem;
+        margin-top: 1rem;
+        padding: 1.25rem;
+    }
+
+    .backgroundImage {
+        max-width: 14rem;
+        max-height: 17.5rem;
+        margin-left: 5rem;
+        margin-top: -10rem;
+    }
+}
+
+
+@keyframes scaleUp {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.1);
+    }
+}
+
