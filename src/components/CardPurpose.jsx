@@ -1,6 +1,7 @@
 import styles from "./CardPurpose.module.css";
 
 export function CardPurpose({ imageSrc, title, description, backgroundImageSrc }) {
+
     return(
         <div className={styles.cardPurpose}>
             <div className={styles.content}>

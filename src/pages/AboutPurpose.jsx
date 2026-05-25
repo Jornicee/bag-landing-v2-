@@ -40,7 +40,8 @@ export function AboutPurpose() {
                 <CardPurpose 
                     imageSrc={ValuesImage} 
                     title="Valores" 
-                    description="Inclusão; 
+                    description="
+                    Inclusão; 
                     Criatividade; 
                     Protagonismo; 
                     Aprendizagem Ativa;
