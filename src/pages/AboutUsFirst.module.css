@@ -1,28 +1,31 @@
+/* ========================
+   SECTION CONTAINER
+   ======================== */
 .sectionAboutUsFirst {
   width: 100%;
   height: auto;
+  padding: 0 1rem;
   background-color: var(--color-orange);
   color: var(--color-white);
-
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 2rem;
   justify-content: flex-start;
-  padding: 0 1rem;
   box-sizing: border-box;
 }
 
+/* ========================
+   HEADER SECTION
+   ======================== */
 .containerHeader {
     display: flex;
-    max-width: 34.563rem;
-    width: 100%;
-    height: auto;
-
     align-items: center;
     justify-content: center;
+    width: 100%;
+    max-width: 34.563rem;
+    height: auto;
     gap: 1rem;
-
     margin: 4rem auto 2rem;
     flex-wrap: wrap;
 }
@@ -31,7 +34,6 @@
     font-size: clamp(1rem, 4vw, 1.4rem);
     font-weight: 700;
     font-family: 'Nunito', sans-serif;
-
     text-align: center;
     margin: 0;
 }
@@ -41,62 +43,65 @@
     height: 3px;
 }
 
+/* ========================
+   CONTENT SECTION
+   ======================== */
 .containerContent {
     width: 100%;
     max-width: 70.938rem;
     height: auto;
-    min-height: auto;
-
+    padding: 0 1rem;
     display: flex;
-    gap: 4rem;
     align-items: center;
     justify-content: center;
+    gap: 4rem;
     flex-wrap: wrap;
-
     margin-bottom: 12rem;
-    padding: 0 1rem;
     box-sizing: border-box;
 }
 
 .containerContent img {
-    background: var(--color-white);
     width: 100%;
     max-width: 28rem;
     height: auto;
     max-height: 9rem;
     padding: 0.5rem;
+    background: var(--color-white);
     border-radius: 20px;
     flex-shrink: 0;
+}
+
+/* ========================
+   TEXT CONTENT
+   ======================== */
+.containerContent .contentTextDesktop {
+    width: 100%;
+    max-width: 34rem;
+    height: auto;
+    padding: 1.5rem;
+    font-family: 'Nunito', sans-serif;
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    color: var(--color-dark-gray);
+    text-align: justify;
+    line-height: 1.6;
+    background: var(--color-white);
+    border-radius: 20px;
+    box-sizing: border-box;
+    overflow-y: auto;
+    display: block;
 }
 
 .containerContent .contentTextMobile {
     display: none;
 }
 
-.containerContent .contentTextDesktop {
-    font-family: 'Nunito', sans-serif;
-    font-size: clamp(1rem, 2vw, 1.25rem);
-    color: var(--color-dark-gray);
-    text-align: justify;
-
-    background: var(--color-white);
-
-    width: 100%;
-    max-width: 34rem;
-    height: auto;
-    min-height: auto;
-    max-height: none;
-    padding: 1.5rem;
-    border-radius: 20px;
-    box-sizing: border-box;
-    overflow-y: auto;
-    line-height: 1.6;
-}
-
 .containerContent span {
     font-weight: 800;
 }
 
+/* ========================
+   RESPONSIVE - TABLET (641px - 1024px)
+   ======================== */
 @media (min-width: 641px) and (max-width: 1024px) {
     .sectionAboutUsFirst {
         min-height: auto;
@@ -125,11 +130,13 @@
 
     .containerContent .contentTextDesktop {
         max-width: 28rem;
-        max-height: none;
         padding: 1.5rem;
     }
 }
 
+/* ========================
+   RESPONSIVE - MOBILE (max-width: 640px)
+   ======================== */
 @media (max-width: 640px) {
     .sectionAboutUsFirst {
         min-height: auto;
@@ -138,8 +145,8 @@
 
     .containerHeader {
         max-width: 100%;
-        margin: 1.5rem auto 1rem;
         gap: 0.5rem;
+        margin: 1.5rem auto 1rem;
     }
     
     .containerHeader h1 {
@@ -153,10 +160,10 @@
     .containerContent {
         width: 100%;
         max-width: 100%;
+        padding: 0;
         flex-direction: column;
         gap: 2rem;
         margin-bottom: 1.5rem;
-        padding: 0;
     }
 
     .containerContent img {
@@ -172,21 +179,17 @@
 
     .containerContent .contentTextMobile {
         display: block;
+        width: 100%;
+        max-width: 18rem;
+        height: auto;
+        padding: 1.25rem;
         font-family: 'Nunito', sans-serif;
         font-size: clamp(0.875rem, 2vw, 1.125rem);
         color: var(--color-dark-gray);
         text-align: justify;
-
+        line-height: 1.6;
         background: var(--color-white);
-
-        width: 100%;
-        max-width: 18rem;
-        height: auto;
-        min-height: auto;
-        max-height: none;
-        padding: 1.25rem;
         border-radius: 20px;
         box-sizing: border-box;
-        line-height: 1.6;
     }
 }

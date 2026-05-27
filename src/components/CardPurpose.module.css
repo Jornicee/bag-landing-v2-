@@ -1,52 +1,82 @@
+/* ========================
+   BASE STYLES
+   ======================== */
 .content {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 2rem;
     justify-content: center;
+    gap: 2rem;
     position: relative;
 }
 
 .content img {
-    max-width:20rem;
-
+    max-width: 20rem;
     background: rgba(0, 0, 0, 0.3);
     border-radius: 0.5rem;
     z-index: 1;
+}
+
+/* ========================
+   TITLE STYLES
+   ======================== */
+.content h2 {
+    font-size: 3rem;
+    font-weight: 600;
+    margin: -5.8rem 6rem 0 0;
+    z-index: 2;
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.2s ease-out, visibility 0.2s ease-out;
+}
+
+/* ========================
+   DESCRIPTION & OVERLAY
+   ======================== */
+.content p {
+    position: absolute;
+    max-width: 18rem;
+    height: 24rem;
+    padding: 0.75rem;
+    font-size: 1.475rem;
+    font-weight: 500;
+    text-align: left;
+    line-height: 1.5;
+    color: var(--color-white);
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 0.5rem;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 1;
+    cursor: pointer;
+    transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out;
 }
 
 .content::after {
     content: '';
     position: absolute;
     left: 50%;
-    transform: translateX(-50%);
+    top: 0;
+    width: 20rem;
+    height: 18rem;
+    margin-top: 6.8rem;
+    margin-left: calc(-20rem / 2);
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
-    pointer-events: none;
     border-radius: 0.5rem;
     z-index: 1;
-    transition: opacity 0.4s ease-in, visibility 0.4s ease-in;
+    pointer-events: none;
     visibility: visible;
     opacity: 1;
-
-    max-width: 20rem;
-    max-height: 18rem;
-    margin-top: 6rem;
+    transition: opacity 0.2s ease-in, visibility 0.2s ease-in;
 }
 
-.content:has(img:hover)::after {
-    visibility: hidden;
-    opacity: 0;
-}
-
-.content h2 {
-    font-size: 3rem;
-    font-weight: 600;
-    z-index: 2;
+/* ========================
+   HOVER INTERACTIONS
+   ======================== */
+.content:has(img:hover) p {
     visibility: visible;
     opacity: 1;
-    transition: opacity 0.4s ease-out, visibility 0.4s ease-out;
-
-    margin: -5.8rem 6rem 0 0;
+    animation: scaleUp 0.2s ease-in-out forwards;
 }
 
 .content:has(img:hover) h2 {
@@ -54,42 +84,39 @@
     opacity: 0;
 }
 
-.content p {
-    text-align: left;
-    font-weight: 500;
-    z-index: 1;
-    position: absolute;
+.content:has(img:hover)::after {
     visibility: hidden;
-    padding: 0.75rem;
     opacity: 0;
-    transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
-    background: rgba(0, 0, 0, 0.7);
-    border-radius: 0.5rem;
-    color: var(--color-white);
-
-    max-width: 18rem;
-    height: 24rem;
-    font-size: 1.475rem;
 }
 
-.content:has(img:hover) p {
-    cursor: pointer;
-    visibility: visible;
-    opacity: 1;
-    animation: scaleUp 0.4s ease-in-out forwards;
-}
-
+/* ========================
+   BACKGROUND IMAGE
+   ======================== */
 .backgroundImage {
+    position: relative;
     width: 100%;
     height: auto;
-    position: relative;
-
     max-width: 32rem;
     max-height: 12rem;
     margin-left: 8rem;
     margin-top: -8rem;
 }
 
+/* ========================
+   ANIMATIONS
+   ======================== */
+@keyframes scaleUp {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.1);
+    }
+}
+
+/* ========================
+   TABLET (641px - 1024px)
+   ======================== */
 @media (min-width: 641px) and (max-width: 1024px) {
     .content img {
         width: 18rem;
@@ -100,6 +127,7 @@
         width: 18rem;
         height: 6.4rem;
         margin-top: 17.6rem;
+        left: 54%;
     }
 
     .content h2 {
@@ -108,18 +136,13 @@
 
     .content p {
         padding: 1rem;
-        height: 24rem;
         font-size: 1.425rem;
-    }
-
-    .backgroundImage {
-        max-width: 32rem;
-        max-height: 12rem;
-        margin-left: 8rem;
-        margin-top: -8rem;
     }
 }
 
+/* ========================
+   MOBILE (max-width: 640px)
+   ======================== */
 @media (max-width: 640px) {
     .content img {
         width: 10rem;
@@ -128,8 +151,9 @@
 
     .content::after {
         width: 10rem;
-        height: 6.4rem;
+        height: 6.2rem;
         margin-top: 6rem;
+        left: 92%;
     }
 
     .content h2 {
@@ -148,14 +172,5 @@
         max-height: 8rem;
         margin-left: 4rem;
         margin-top: -6rem;
-    }
-}
-
-@keyframes scaleUp {
-    from {
-        transform: scale(1);
-    }
-    to {
-        transform: scale(1.1);
     }
 }

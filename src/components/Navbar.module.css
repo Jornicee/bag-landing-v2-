@@ -1,20 +1,27 @@
+/* ========================
+   NAVBAR CONTAINER
+   ======================== */
 .navbar {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding: 0.75rem 1.5rem;
-
+  justify-content: space-between;
   width: 77.688rem;
   height: 7.563rem;
-
+  padding: 0.75rem 1.5rem;
   margin: 4rem auto;
 }
 
+/* ========================
+   LOGO
+   ======================== */
 .logo {
   width: 4rem;
   height: auto;
 }
 
+/* ========================
+   NAVIGATION LINKS
+   ======================== */
 .navLinks {
   display: flex;
   gap: 1.5rem;
@@ -28,20 +35,22 @@
   color: var(--color-dark-gray);
   font-size: 1.175rem;
   font-weight: 400;
-
   text-decoration: none;
+  transition: background-color 0.2s ease, color 0.2s ease, font-weight 0.2s ease;
 }
 
 .navLinks a:hover {
   width: 12.125rem;
-  font-weight: 600;
-  background: var(--color-violet);
   padding: 0.5rem 0.725rem;
+  background: var(--color-violet);
   border-radius: 0.375rem;
   color: var(--color-white);
-  transition: background-color 0.2s ease, color 0.2s ease, font-weight 0.2s ease;
+  font-weight: 600;
 }
 
+/* ========================
+   MENU BUTTON
+   ======================== */
 .menuButton {
   background: none;
   border: none;
