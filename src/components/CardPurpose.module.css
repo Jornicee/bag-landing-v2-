@@ -27,7 +27,7 @@
     z-index: 2;
     visibility: visible;
     opacity: 1;
-    transition: opacity 0.2s ease-out, visibility 0.2s ease-out;
+    transition: opacity 0.4s ease-out, visibility 0s;
 }
 
 /* ========================
@@ -49,7 +49,7 @@
     opacity: 0;
     z-index: 1;
     cursor: pointer;
-    transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out;
+    transition: opacity 0.4s ease-out, visibility 0s 0.4s;
 }
 
 .content::after {
@@ -67,7 +67,7 @@
     pointer-events: none;
     visibility: visible;
     opacity: 1;
-    transition: opacity 0.2s ease-in, visibility 0.2s ease-in;
+    transition: opacity 0.4s ease-out, visibility 0s;
 }
 
 /* ========================
@@ -76,17 +76,19 @@
 .content:has(img:hover) p {
     visibility: visible;
     opacity: 1;
-    animation: scaleUp 0.2s ease-in-out forwards;
+    transition: opacity 0.4s ease-out, visibility 0s;
 }
 
 .content:has(img:hover) h2 {
     visibility: hidden;
     opacity: 0;
+    transition: opacity 0.4s ease-in, visibility 0s 0.4s;
 }
 
 .content:has(img:hover)::after {
     visibility: hidden;
     opacity: 0;
+    transition: opacity 0.4s ease-in, visibility 0s 0.4s;
 }
 
 /* ========================

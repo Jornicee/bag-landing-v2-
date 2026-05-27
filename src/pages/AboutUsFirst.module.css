@@ -149,8 +149,8 @@
         margin: 1.5rem auto 1rem;
     }
     
-    .containerHeader h1 {
-        font-size: clamp(0.875rem, 3vw, 1.25rem);
+    .containerHeader h2 {
+        font-size: 1rem;
     }
 
     .containerHeader img {

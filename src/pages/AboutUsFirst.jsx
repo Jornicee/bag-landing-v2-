@@ -5,13 +5,13 @@ import styles from "./AboutUsFirst.module.css";
 
 export function AboutUsFirst() {
     return (
-        <section id="aboutus" className={styles.sectionAboutUsFirst}>
-            <div className={styles.containerHeader}>
-                <img src={LineImage} alt="Linha azul" />
-                <h1>SOBRE NÓS</h1>
-                <img src={LineImage} alt="Linha azul" />
-            </div>
-            <div className={styles.containerContent}>
+        <section id="aboutus" className={styles.sectionAboutUsFirst} aria-label="Seção sobre nós">
+            <header className={styles.containerHeader}>
+                <img src={LineImage} alt="" aria-hidden="true" />
+                <h2>SOBRE NÓS</h2>
+                <img src={LineImage} alt="" aria-hidden="true" />
+            </header>
+            <article className={styles.containerContent}>
                 <img src={YBEduLogo02} alt="Logo da YellowBagEdu" />
                 <p className={styles.contentTextMobile}>
                     A YellowBagEdu é uma StartUp Paraense 
@@ -41,7 +41,7 @@ export function AboutUsFirst() {
                     preparados para um futuro onde a tecnologia é parte 
                     essencial da vida.
                 </p>
-            </div>
+            </article>
         </section>
     )
 }

@@ -34,54 +34,65 @@ export function Navbar() {
   }, []);
 
   return (
-    <div>
-      <nav className={styles.navbar}>
-        <img src={YbEduLogo} className={styles.logo} alt="Logo da YellowBagEdu"/>
-        <div className={styles.navLinks}>
-          <a href="#home">
-            <Backpack size={32} />
-            HOME
-          </a>
-          <a href="#aboutus">
-            <Info size={32} />
-            SOBRE NÓS
-          </a>
-          <a href="#">
-            <NewspaperClipping size={32} />
-            MEMÓRIAS
-          </a>
-          <a href="#">
-            <AddressBookTabs size={32} />
-            CONTATOS
-          </a>
-        </div>
-        <div className={styles.menuWrapper} ref={menuRef}>
-          <button className={showMenu ? styles.menuButtonOpen : styles.menuButton} onClick={toggleMenu}>
-            <img src={showMenu ? MenuIconWhite : MenuIcon} alt="Ícone de Menu" />
-          </button>
-          {showMenu && (
-            <div className={styles.menu}>
-              <a href="#home">
-                {" "}
-                <Backpack size={32} /> HOME
-              </a>
-              <a href="#aboutus">
-                {" "}
-                <Info size={32} /> SOBRE NÓS
-              </a>
-              <a href="#">
-                {" "}
-                <NewspaperClipping size={32} /> MEMÓRIAS
-              </a>
-              <a href="#">
-                {" "}
-                <AddressBookTabs size={32} /> CONTATOS
-              </a>
-            </div>
-          )}
-        </div>
-      </nav>
-    </div>
+    <nav className={styles.navbar} aria-label="Navegação principal">
+      <a href="#home" className={styles.logoLink}>
+        <img src={YbEduLogo} className={styles.logo} alt="YellowBagEdu - Home"/>
+      </a>
+      <div className={styles.navLinks} role="menubar">
+        <a href="#home" role="menuitem">
+          <Backpack size={32} aria-hidden="true" />
+          <span>HOME</span>
+        </a>
+        <a href="#aboutus" role="menuitem">
+          <Info size={32} aria-hidden="true" />
+          <span>SOBRE NÓS</span>
+        </a>
+        <a href="#memorias" role="menuitem">
+          <NewspaperClipping size={32} aria-hidden="true" />
+          <span>MEMÓRIAS</span>
+        </a>
+        <a href="#contatos" role="menuitem">
+          <AddressBookTabs size={32} aria-hidden="true" />
+          <span>CONTATOS</span>
+        </a>
+      </div>
+      <div className={styles.menuWrapper} ref={menuRef}>
+        <button 
+          className={showMenu ? styles.menuButtonOpen : styles.menuButton} 
+          onClick={toggleMenu}
+          aria-label={showMenu ? "Fechar menu" : "Abrir menu"}
+          aria-expanded={showMenu}
+          aria-controls="mobile-menu"
+        >
+          <img src={showMenu ? MenuIconWhite : MenuIcon} alt="" aria-hidden="true" />
+        </button>
+        {showMenu && (
+          <nav 
+            className={styles.menu}
+            id="mobile-menu"
+            role="menu"
+            aria-label="Navegação móvel"
+          >
+            <a href="#home" role="menuitem">
+              <Backpack size={32} aria-hidden="true" /> 
+              <span>HOME</span>
+            </a>
+            <a href="#aboutus" role="menuitem">
+              <Info size={32} aria-hidden="true" /> 
+              <span>SOBRE NÓS</span>
+            </a>
+            <a href="#memorias" role="menuitem">
+              <NewspaperClipping size={32} aria-hidden="true" /> 
+              <span>MEMÓRIAS</span>
+            </a>
+            <a href="#contatos" role="menuitem">
+              <AddressBookTabs size={32} aria-hidden="true" /> 
+              <span>CONTATOS</span>
+            </a>
+          </nav>
+        )}
+      </div>
+    </nav>
   );
 }
 

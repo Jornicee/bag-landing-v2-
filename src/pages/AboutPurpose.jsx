@@ -13,12 +13,12 @@ import { CardPurpose } from "../components/CardPurpose";
 
 export function AboutPurpose() {
     return(
-        <section className={styles.sectionAboutPurpose}>
-            <div className={styles.containerHeader}>
-                <img src={LineImage} alt="Linha amarela" />
-                <h1>NOSSO PROPÓSITO</h1>
-                <img src={LineImage} alt="Linha amarela" />
-            </div>
+        <section className={styles.sectionAboutPurpose} aria-label="Propósito e valores da empresa">
+            <header className={styles.containerHeader}>
+                <img src={LineImage} alt="" aria-hidden="true" />
+                <h2>NOSSO PROPÓSITO</h2>
+                <img src={LineImage} alt="" aria-hidden="true" />
+            </header>
             <div className={styles.containerContent}>
                 <CardPurpose 
                     imageSrc={MissionImage} 
