@@ -2,14 +2,12 @@
    SECTION CONTAINER
    ======================== */
 
-.sectionAbouTeam {
+.sectionAboutTeam {
     width: 100%;
-    height: auto;
     padding: 0 1rem;
-
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     justify-content: center;
     box-sizing: border-box;
 }
@@ -30,37 +28,69 @@
     flex-wrap: wrap;
 }
 
-.containerHeader h1 {
+.containerHeader h2 {
     font-size: clamp(1rem, 4vw, 1.4rem);
-    font-weight: 700;
+    font-weight: 800;
     font-family: 'Nunito', sans-serif;
     text-align: center;
     margin: 0;
 }
 
+/* ========================
+   CAROUSEL CONTAINER
+   ======================== */
+
+.carouselContainer {
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem 0;
+}
+
+
+/* ========================
+   TABLET (641px - 1024px)
+   ======================== */
+
+@media (min-width: 641px) and (max-width: 1024px) {
+    .containerHeader {
+        max-width: 40rem;
+        gap: 1.2rem;
+        margin: 3rem auto 2.5rem;
+    }
+
+    .containerHeader h2 {
+        font-size: 1.5rem;
+    }
+}
+
+/* ========================
+   MOBILE (max-width: 640px)
+   ======================== */
 
 @media (max-width: 640px) {
-    .sectionAbouTeam {
+    .sectionAboutTeam {
         min-height: auto;
         padding: 1rem;
     }
     
     .containerHeader {
-        max-width:25rem;
+        max-width: 25rem;
         gap: 0.5rem;
         margin: 1.5rem auto 1rem;
         padding: 0.5rem;
     }
 
     .containerHeader img {
-    width: clamp(4rem, 10vw, 6.625rem);
-    height: 3px;
+        width: clamp(4rem, 10vw, 6.625rem);
+        height: 3px;
     }
 
     .containerHeader h2 {
         font-size: 1rem;
     }
-
-
 }
 

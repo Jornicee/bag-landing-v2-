@@ -5,12 +5,12 @@ import { Home } from "./pages/Home";
 
 function App() {
   return (
-    <dib>
+    <div>
       <Home />
       <AboutUsFirst/>
       <AboutPurpose/>
       <AboutTeam />
-    </dib>
+    </div>
   );
 }
 
