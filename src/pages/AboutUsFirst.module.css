@@ -1,0 +1,195 @@
+/* ========================
+   SECTION CONTAINER
+   ======================== */
+.sectionAboutUsFirst {
+  width: 100%;
+  height: auto;
+  padding: 0 1rem;
+  background-color: var(--color-orange);
+  color: var(--color-white);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  justify-content: flex-start;
+  box-sizing: border-box;
+}
+
+/* ========================
+   HEADER SECTION
+   ======================== */
+.containerHeader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 34.563rem;
+    height: auto;
+    gap: 1rem;
+    margin: 4rem auto 2rem;
+    flex-wrap: wrap;
+}
+
+.containerHeader h1 {
+    font-size: clamp(1rem, 4vw, 1.4rem);
+    font-weight: 700;
+    font-family: 'Nunito', sans-serif;
+    text-align: center;
+    margin: 0;
+}
+
+.containerHeader img {
+    width: clamp(4rem, 10vw, 6.625rem);
+    height: 3px;
+}
+
+/* ========================
+   CONTENT SECTION
+   ======================== */
+.containerContent {
+    width: 100%;
+    max-width: 70.938rem;
+    height: auto;
+    padding: 0 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+    flex-wrap: wrap;
+    margin-bottom: 12rem;
+    box-sizing: border-box;
+}
+
+.containerContent img {
+    width: 100%;
+    max-width: 28rem;
+    height: auto;
+    max-height: 9rem;
+    padding: 0.5rem;
+    background: var(--color-white);
+    border-radius: 20px;
+    flex-shrink: 0;
+}
+
+/* ========================
+   TEXT CONTENT
+   ======================== */
+.containerContent .contentTextDesktop {
+    width: 100%;
+    max-width: 34rem;
+    height: auto;
+    padding: 1.5rem;
+    font-family: 'Nunito', sans-serif;
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    color: var(--color-dark-gray);
+    text-align: justify;
+    line-height: 1.6;
+    background: var(--color-white);
+    border-radius: 20px;
+    box-sizing: border-box;
+    overflow-y: auto;
+    display: block;
+}
+
+.containerContent .contentTextMobile {
+    display: none;
+}
+
+.containerContent span {
+    font-weight: 800;
+}
+
+/* ========================
+   RESPONSIVE - TABLET (641px - 1024px)
+   ======================== */
+@media (min-width: 641px) and (max-width: 1024px) {
+    .sectionAboutUsFirst {
+        min-height: auto;
+        padding: 2rem 1rem;
+    }
+    
+    .containerHeader {
+        max-width: 100%;
+        margin: 2rem auto 5rem;
+    }
+
+    .containerHeader h1 {
+        font-size: clamp(1rem, 3.5vw, 1.75rem);
+    }
+
+    .containerContent {
+        flex-direction: column;
+        gap: 5rem;
+        margin-bottom: 2rem;
+    }
+
+    .containerContent img {
+        max-width: 28rem;
+        max-height: 8rem;
+    }
+
+    .containerContent .contentTextDesktop {
+        max-width: 28rem;
+        padding: 1.5rem;
+    }
+}
+
+/* ========================
+   RESPONSIVE - MOBILE (max-width: 640px)
+   ======================== */
+@media (max-width: 640px) {
+    .sectionAboutUsFirst {
+        min-height: auto;
+        padding: 1rem;
+    }
+
+    .containerHeader {
+        max-width: 100%;
+        gap: 0.5rem;
+        margin: 1.5rem auto 1rem;
+    }
+    
+    .containerHeader h2 {
+        font-size: 1rem;
+    }
+
+    .containerHeader img {
+        max-width: 4rem;
+    }
+
+    .containerContent {
+        width: 100%;
+        max-width: 100%;
+        padding: 0;
+        flex-direction: column;
+        gap: 2rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .containerContent img {
+        width: 100%;
+        max-width: 18rem;
+        max-height: 6rem;
+        padding: 0.5rem;
+    }
+
+    .containerContent .contentTextDesktop {
+        display: none;
+    }
+
+    .containerContent .contentTextMobile {
+        display: block;
+        width: 100%;
+        max-width: 18rem;
+        height: auto;
+        padding: 1.25rem;
+        font-family: 'Nunito', sans-serif;
+        font-size: clamp(0.875rem, 2vw, 1.125rem);
+        color: var(--color-dark-gray);
+        text-align: justify;
+        line-height: 1.6;
+        background: var(--color-white);
+        border-radius: 20px;
+        box-sizing: border-box;
+    }
+}

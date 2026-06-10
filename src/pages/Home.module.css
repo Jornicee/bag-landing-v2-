@@ -1,0 +1,201 @@
+/* ========================
+   MAIN LAYOUT
+   ======================== */
+main {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 2rem;
+    width: 77.688rem;
+    margin: 4rem auto;
+}
+
+/* ========================
+   MAIN CONTAINER
+   ======================== */
+.mainContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 2rem;
+  padding: 0.375rem 0.75rem;
+  margin: 1.25rem auto;
+}
+
+/* ========================
+   DESCRIPTION TEXT
+   ======================== */
+.descriptionDesktop {
+    width: 40.813rem;
+    height: 6rem;
+}
+
+.descriptionMobile {
+    display: none;
+}
+
+/* ========================
+   CALL-TO-ACTION BUTTON
+   ======================== */
+.mainContainer a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.275rem;
+    padding: 0.75rem 1.5rem;
+    background: var(--color-violet);
+    border-radius: 0.375rem;
+    color: var(--color-white);
+    font-size: 1rem;
+    font-weight: 500;
+    text-decoration: none;
+    cursor: pointer;
+    transition: transform 180ms ease, box-shadow 180ms ease, background-color 180ms ease;
+}
+
+.mainContainer a:hover {
+    transform: translateY(-2px) scale(1.02);
+    background-color: #7c4dff;
+    box-shadow: 0 12px 24px rgba(102, 51, 153, 0.16);
+    font-weight: 600;
+}
+
+/* ========================
+   IMAGE SECTION
+   ======================== */
+.imageSection {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    gap: 0;
+    margin: 4rem auto;
+}
+
+.imageSection img {
+    width: 18rem;
+    height: 22rem;
+    position: relative;
+    transition: transform 200ms ease-in-out, filter 200ms ease-in-out;
+}
+
+.imageSection img:first-child {
+    margin-right: -8rem;
+    margin-top: 4rem;
+    z-index: 2;
+}
+
+.imageSection img:last-child {
+    margin-top: -20rem;
+    z-index: 1;
+}
+
+.imageSection img:hover {
+    transform: translateY(-8px) scale(1.05);
+    filter: drop-shadow(0 8px 16px rgba(102, 51, 153, 0.2));
+}
+
+/* ========================
+   RESPONSIVE - TABLET (641px - 1024px)
+   ======================== */
+@media (min-width: 641px) and (max-width: 1024px) {
+    main {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        max-width: 45rem;
+        margin: 1rem auto;
+    }
+
+    .mainContainer {
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .mainContainer h1 {
+        font-size: 2.5rem;
+        text-align: center;
+        padding: 0.75rem;
+    }
+
+    .descriptionDesktop {
+        display: none;
+    }
+
+    .descriptionMobile {
+        display: block;
+        max-width: 40rem;
+        padding: 0.75rem 1rem;
+        font-size: 0.95rem;
+        text-align: justify;
+    }
+
+    .imageSection {
+        margin: 6rem auto;
+    }
+
+    .imageSection img {
+        width: 12rem;
+        height: 15rem;
+    }
+
+    .imageSection img:first-child {
+        margin-right: -4rem;
+        margin-top: 2rem;
+    }
+
+    .imageSection img:last-child {
+        margin-top: -14rem;
+    }
+}
+
+/* ========================
+   RESPONSIVE - MOBILE (max-width: 640px)
+   ======================== */
+@media (max-width: 640px) {
+    main {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 23.75rem;
+    }
+
+    .mainContainer {
+        align-items: center;
+        justify-content: center;
+    }
+
+    .mainContainer h1 {
+        font-size: 2.25rem;
+        text-align: center;
+        padding: 0.75rem;
+    }
+
+    .descriptionDesktop {
+        display: none;
+    }
+
+    .descriptionMobile {
+        display: block;
+        max-width: 22.25rem;
+        padding: 1rem;
+        font-size: 0.875rem;
+        text-align: justify;
+    }
+
+    .imageSection img {
+        width: 8.875rem;
+        height: 11.875rem;
+    }
+
+    .imageSection img:first-child {
+        margin-right: -2.75rem;
+    }
+
+    .imageSection img:last-child {
+        margin-top: -12rem;
+    }
+}
