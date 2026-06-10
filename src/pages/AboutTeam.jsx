@@ -1,5 +1,6 @@
 import { ArrowCircleLeftIcon, ArrowCircleRightIcon } from '@phosphor-icons/react';
 import { useState, useCallback } from 'react';
+import { CardTeamMember } from '../components/CardTeamMember';
 
 import styles from './AboutTeam.module.css';
 import LineImage from "../assets/line-img.svg";
@@ -10,8 +11,6 @@ import TeamMember4 from "../assets/teammembers/member-img04.png";
 import TeamMember5 from "../assets/teammembers/member-img05.png";
 import TeamMember6 from "../assets/teammembers/member-img06.png";
 import TeamMember7 from "../assets/teammembers/member-img07.png";
-
-import { CardTeamMember } from '../components/CardTeamMember';
 
 const TEAM_MEMBERS = [
     { id: 1, name: "Marcelo Saldanha", description: "Fundador da YellowBagEdu", imageSrc: TeamMember1 },
